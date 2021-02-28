@@ -20,5 +20,12 @@
 * This searching technique looks for a particular element by comparing the middle most element of the collection.
 * It is useful when there are large number of elements in an array.
 
+Binary Search: <b>log<sub>2</sub><sup>n</sup></b> = How many time to search in array. Where <b>n</b> = array values.
+
+``
+$arr = array(2, 10, 30, 25, 20, 40, 60, 50, 70, 80, 90, 100, 150, 170, 200, 180);
+``
+
+Here, n = 16. Then <b>log<sub>2</sub><sup>16</sup> = 4</b> times search in this array!
 
 [Read More](https://www.tutorialride.com/data-structures/searching-in-data-structure.htm)
