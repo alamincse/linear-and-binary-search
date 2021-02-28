@@ -2,18 +2,24 @@
 
 class LinearAndBinarySearch 
 {
-	public $arr;
+	protected $arr;
 
 	public function __construct($arr) {
 		$this->arr = $arr;
 	}
 
+	private function error() {
+		// check array or not and it's not empty.
+		if (! is_array($this->arr) || empty($this->arr)) {
+			echo 'Please use array and it should not be empty!';
+			exit;
+		} 
+
+		return;
+	}
 
 	public function linearSearch($number) {
-		// check if array or not and it's not empty.
-		if (! is_array($this->arr) || empty($this->arr)) {
-			return 'Please use array and it should not be empty!';
-		} 
+		$this->error();
 
 		for ($i = 0; $i < count($this->arr); $i++) {
 			if ($this->arr[$i] == $number) {
@@ -26,12 +32,8 @@ class LinearAndBinarySearch
 	}
 
 
-
 	public function binarySearch($number) {
-		// check if array or not and it's not empty.
-		if (! is_array($this->arr) || empty($this->arr)) {
-			return 'Please use array and it should not be empty!';
-		} 
+		$this->error();
 
 		// array must be sorted for binary search.
         sort($this->arr);
@@ -61,9 +63,11 @@ class LinearAndBinarySearch
 	}
 }
 
- $arr = array(2, 10, 30, 25, 40, 60, 50, 70, 80, 90, 100);
+$arr = array(2, 10, 30, 25, 40, 60, 50, 70, 80, 90, 100);
+$linearNumber = 60;
+$binaryNumber = 60;
 
- $search = new LinearAndBinarySearch($arr);
+$search = new LinearAndBinarySearch($arr);
 
- echo $search->linearSearch(60);
- echo $search->binarySearch(60);
+echo $search->linearSearch($linearNumber);
+echo $search->binarySearch($binaryNumber);
