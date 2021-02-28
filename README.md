@@ -19,3 +19,6 @@
 * Binary search works on the principle of divide and conquer.
 * This searching technique looks for a particular element by comparing the middle most element of the collection.
 * It is useful when there are large number of elements in an array.
+
+
+[Read More](https://www.tutorialride.com/data-structures/searching-in-data-structure.htm)
